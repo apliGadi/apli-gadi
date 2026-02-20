@@ -1,9 +1,9 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useId } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { Menu, X, Phone } from "lucide-react"
+import { Menu, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet"
 
@@ -17,6 +17,7 @@ const navLinks = [
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false)
+  const sheetId = useId()
 
   return (
     <header className="sticky top-0 z-50 bg-primary text-primary-foreground">
@@ -27,7 +28,7 @@ export function SiteHeader() {
             alt="Apli Gadl.in - Pre-Owned Cars"
             width={140}
             height={56}
-            className="h-12 w-auto"
+            style={{ height: "48px", width: "auto" }}
             priority
           />
         </Link>
@@ -57,7 +58,7 @@ export function SiteHeader() {
           </Link>
         </div>
 
-        <Sheet open={open} onOpenChange={setOpen}>
+        <Sheet key={sheetId} open={open} onOpenChange={setOpen}>
           <SheetTrigger asChild className="lg:hidden">
             <Button variant="ghost" size="icon" className="text-primary-foreground hover:bg-primary-foreground/10">
               <Menu className="h-6 w-6" />
@@ -73,7 +74,7 @@ export function SiteHeader() {
                   alt="Apli Gadl.in - Pre-Owned Cars"
                   width={120}
                   height={48}
-                  className="h-10 w-auto"
+                  style={{ height: "40px", width: "auto" }}
                 />
               </Link>
               <nav className="flex flex-col gap-1">
