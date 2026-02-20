@@ -139,7 +139,7 @@ export default async function CarDetailPage({ params }: { params: Promise<{ id: 
                     </Button>
                   </Link>
                   <a
-                    href={`https://wa.me/919876543210?text=Hi, I am interested in ${car.brand} ${car.model} ${car.variant} (${car.year}) listed at Rs ${car.price.toLocaleString("en-IN")}`}
+                    href={`https://wa.me/919284173612?text=Hi, I am interested in ${car.brand} ${car.model} ${car.variant} (${car.year}) listed at Rs ${car.price.toLocaleString("en-IN")}`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -152,7 +152,7 @@ export default async function CarDetailPage({ params }: { params: Promise<{ id: 
 
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
                   <Phone className="h-4 w-4" />
-                  <span>Call us: +91 98765 43210</span>
+                  <span>Call us: +91 92841 73612</span>
                 </div>
               </CardContent>
             </Card>

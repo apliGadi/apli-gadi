@@ -19,8 +19,8 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Phone",
-    details: "+91 98765 43210",
-    href: "tel:+919876543210",
+    details: "+91 92841 73612",
+    href: "tel:+919284173612",
   },
   {
     icon: Mail,
@@ -104,7 +104,7 @@ export default function ContactPage() {
               </div>
 
               <a
-                href="https://wa.me/919876543210?text=Hi, I want to inquire about cars at Apli Gadi"
+                href="https://wa.me/919284173612?text=Hi, I want to inquire about cars at Apli Gadi"
                 target="_blank"
                 rel="noopener noreferrer"
               >

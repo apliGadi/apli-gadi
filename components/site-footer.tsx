@@ -37,9 +37,9 @@ export function SiteFooter() {
 
           <div className="flex flex-col gap-3">
             <h3 className="text-sm font-semibold uppercase tracking-wider text-primary-foreground/50">Contact</h3>
-            <a href="tel:+919876543210" className="flex items-center gap-2 text-sm text-primary-foreground/70 transition-colors hover:text-primary-foreground">
+            <a href="tel:+919284173612" className="flex items-center gap-2 text-sm text-primary-foreground/70 transition-colors hover:text-primary-foreground">
               <Phone className="h-4 w-4 shrink-0" />
-              +91 98765 43210
+              +91 92841 73612
             </a>
             <a href="mailto:info@apligadi.in" className="flex items-center gap-2 text-sm text-primary-foreground/70 transition-colors hover:text-primary-foreground">
               <Mail className="h-4 w-4 shrink-0" />
@@ -57,7 +57,7 @@ export function SiteFooter() {
             2026 Apli Gadi. All rights reserved.
           </p>
           <a
-            href="https://wa.me/919876543210"
+            href="https://wa.me/919284173612"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-lg bg-[#25D366] px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-[#20BD5A]"

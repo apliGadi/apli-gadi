@@ -103,25 +103,25 @@ export function EmiCalculator({ defaultPrice = 1000000 }: EmiCalculatorProps) {
           />
         </div>
 
-        <div className="rounded-xl bg-primary p-5 text-primary-foreground">
+        <div className="rounded-xl bg-accent p-5 text-accent-foreground">
           <div className="mb-3 text-center">
-            <p className="text-sm text-primary-foreground/60">Your Monthly EMI</p>
-            <p className="text-3xl font-bold text-accent">
+            <p className="text-sm text-accent-foreground/70">Your Monthly EMI</p>
+            <p className="text-3xl font-bold text-accent-foreground">
               {"₹"}{Math.round(emi).toLocaleString("en-IN")}
             </p>
           </div>
           <div className="grid grid-cols-3 gap-3 text-center">
             <div>
-              <p className="text-xs text-primary-foreground/50">Loan Amount</p>
-              <p className="text-sm font-semibold">{"₹"}{loanAmount.toLocaleString("en-IN")}</p>
+              <p className="text-xs text-accent-foreground/60">Loan Amount</p>
+              <p className="text-sm font-semibold text-accent-foreground">{"₹"}{loanAmount.toLocaleString("en-IN")}</p>
             </div>
             <div>
-              <p className="text-xs text-primary-foreground/50">Total Interest</p>
-              <p className="text-sm font-semibold">{"₹"}{Math.round(totalInterest).toLocaleString("en-IN")}</p>
+              <p className="text-xs text-accent-foreground/60">Total Interest</p>
+              <p className="text-sm font-semibold text-accent-foreground">{"₹"}{Math.round(totalInterest).toLocaleString("en-IN")}</p>
             </div>
             <div>
-              <p className="text-xs text-primary-foreground/50">Total Payment</p>
-              <p className="text-sm font-semibold">{"₹"}{Math.round(totalPayment).toLocaleString("en-IN")}</p>
+              <p className="text-xs text-accent-foreground/60">Total Payment</p>
+              <p className="text-sm font-semibold text-accent-foreground">{"₹"}{Math.round(totalPayment).toLocaleString("en-IN")}</p>
             </div>
           </div>
         </div>

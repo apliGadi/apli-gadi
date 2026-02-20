@@ -19,7 +19,7 @@ export function CtaSection() {
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </Link>
-          <a href="tel:+919876543210">
+          <a href="tel:+919284173612">
             <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
               <Phone className="mr-2 h-4 w-4" />
               Call Us Now

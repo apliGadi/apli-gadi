@@ -41,7 +41,7 @@ export function HeroSection() {
               </Button>
             </Link>
             <Link href="/finance">
-              <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+              <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
                 <Calculator className="mr-2 h-4 w-4" />
                 Check EMI
               </Button>

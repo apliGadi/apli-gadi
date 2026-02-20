@@ -93,9 +93,9 @@ export function SiteHeader() {
                 </Link>
               </div>
               <div className="mt-auto px-3">
-                <a href="tel:+919876543210" className="flex items-center gap-2 text-sm text-primary-foreground/70">
+                <a href="tel:+919284173612" className="flex items-center gap-2 text-sm text-primary-foreground/70">
                   <Phone className="h-4 w-4" />
-                  +91 98765 43210
+                  +91 92841 73612
                 </a>
               </div>
             </div>
