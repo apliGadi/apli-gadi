@@ -51,7 +51,7 @@ export function SiteHeader() {
             </Button>
           </Link>
           <Link href="/sell">
-            <Button variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+            <Button variant="outline" className="border-primary-foreground/30 text-red-600 hover:bg-primary-foreground/10">
               Sell a Car
             </Button>
           </Link>
@@ -71,7 +71,7 @@ export function SiteHeader() {
                 <Image
                   src="/images/logo.png"
                   alt="Apli Gadl.in - Pre-Owned Cars"
-                  width={120}
+                  width={220}
                   height={48}
                   className="h-10 w-auto"
                 />
