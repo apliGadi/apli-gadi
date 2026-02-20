@@ -60,7 +60,7 @@ export const cars: Car[] = [
     fuelType: "Petrol",
     transmission: "Manual",
     registrationState: "MH",
-    price: Rs 2, 80,000,
+    price: 280000,
     emiStarting: 21000,
     image: "/images/car-2.jpg",
     images: ["/images/car-2.jpg"],
