@@ -64,7 +64,7 @@ export const cars: Car[] = [
     emiStarting: 21000,
     image: "/images/car-2.jpg",
     images: ["/images/car-2.jpg"],
-    ownership: "1st Owner",
+    ownership: "2nd Owner",
     color: "Perl White",
     engine: "1200 cc",
     mileage: "22 km/l",
