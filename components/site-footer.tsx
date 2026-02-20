@@ -14,7 +14,7 @@ export function SiteFooter() {
                 alt="Apli Gadl.in - Pre-Owned Cars"
                 width={140}
                 height={56}
-                className="h-14 w-auto"
+                style={{ height: "56px", width: "auto" }}
               />
             </Link>
             <p className="text-sm leading-relaxed text-primary-foreground/70">
