@@ -1,5 +1,6 @@
 import Link from "next/link"
-import { Car, Phone, Mail, MapPin } from "lucide-react"
+import Image from "next/image"
+import { Phone, Mail, MapPin } from "lucide-react"
 
 export function SiteFooter() {
   return (
@@ -7,11 +8,14 @@ export function SiteFooter() {
       <div className="mx-auto max-w-7xl px-4 py-12 lg:px-6">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="flex flex-col gap-4">
-            <Link href="/" className="flex items-center gap-2">
-              <Car className="h-7 w-7 text-accent" />
-              <span className="text-xl font-bold">
-                Apli <span className="text-accent">Gadi</span>
-              </span>
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/images/logo.png"
+                alt="Apli Gadl.in - Pre-Owned Cars"
+                width={140}
+                height={56}
+                className="h-14 w-auto"
+              />
             </Link>
             <p className="text-sm leading-relaxed text-primary-foreground/70">
               Nagpur&apos;s most trusted pre-owned car dealership. Verified cars, transparent pricing, and complete customer support.

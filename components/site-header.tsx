@@ -2,7 +2,8 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Menu, X, Phone, Car } from "lucide-react"
+import Image from "next/image"
+import { Menu, X, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet"
 
@@ -20,11 +21,15 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 bg-primary text-primary-foreground">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 lg:px-6">
-        <Link href="/" className="flex items-center gap-2">
-          <Car className="h-7 w-7 text-accent" />
-          <span className="text-xl font-bold tracking-tight">
-            Apli <span className="text-accent">Gadi</span>
-          </span>
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/images/logo.png"
+            alt="Apli Gadl.in - Pre-Owned Cars"
+            width={140}
+            height={56}
+            className="h-12 w-auto"
+            priority
+          />
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex">
@@ -62,11 +67,14 @@ export function SiteHeader() {
           <SheetContent side="right" className="w-72 bg-primary text-primary-foreground">
             <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
             <div className="flex flex-col gap-6 pt-6">
-              <Link href="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
-                <Car className="h-7 w-7 text-accent" />
-                <span className="text-xl font-bold">
-                  Apli <span className="text-accent">Gadi</span>
-                </span>
+              <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
+                <Image
+                  src="/images/logo.png"
+                  alt="Apli Gadl.in - Pre-Owned Cars"
+                  width={120}
+                  height={48}
+                  className="h-10 w-auto"
+                />
               </Link>
               <nav className="flex flex-col gap-1">
                 {navLinks.map((link) => (
