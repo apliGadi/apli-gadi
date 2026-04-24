@@ -1,3 +1,6 @@
+"use client"
+
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Badge } from "@/components/ui/badge"
@@ -7,11 +10,34 @@ import { Fuel, Gauge, Calendar, Settings2 } from "lucide-react"
 import { type Car, formatPrice, formatKm } from "@/lib/data"
 
 export function CarCard({ car }: { car: Car }) {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const [isHovering, setIsHovering] = useState(false)
+
+  const images = car.images && car.images.length > 0 ? car.images : [car.image]
+  const currentImage = images[currentImageIndex]
+
+  useEffect(() => {
+    if (!isHovering || images.length <= 1) return
+
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % images.length)
+    }, 800)
+
+    return () => clearInterval(interval)
+  }, [isHovering, images.length])
+
   return (
     <Card className="group overflow-hidden border-border bg-card transition-shadow hover:shadow-lg">
-      <div className="relative aspect-[4/3] overflow-hidden">
+      <div
+        className="relative aspect-[4/3] overflow-hidden"
+        onMouseEnter={() => setIsHovering(true)}
+        onMouseLeave={() => {
+          setIsHovering(false)
+          setCurrentImageIndex(0)
+        }}
+      >
         <Image
-          src={car.image}
+          src={currentImage}
           alt={`${car.brand} ${car.model} ${car.variant}`}
           fill
           className="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -25,6 +51,18 @@ export function CarCard({ car }: { car: Car }) {
           <Badge className="bg-primary/80 text-primary-foreground">{car.registrationState}</Badge>
           <Badge className="bg-accent/90 text-accent-foreground">{car.ownership}</Badge>
         </div>
+        {images.length > 1 && (
+          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1">
+            {images.map((_, idx) => (
+              <div
+                key={idx}
+                className={`h-1.5 rounded-full transition-all ${
+                  idx === currentImageIndex ? "w-6 bg-accent" : "w-1.5 bg-white/50"
+                }`}
+              />
+            ))}
+          </div>
+        )}
       </div>
       <CardContent className="flex flex-col gap-3 p-4">
         <div>
